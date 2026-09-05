@@ -1,207 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Site officiel du Collège Le Pionnier - Ville de Kolwezi">
-<title>Collège Le Pionnier | Ville de Kolwezi</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Site officiel du Collège Le Pionnier à Kolwezi, RDC.">
+<title>Collège Le Pionnier | Site officiel</title>
 <style>
-:root{
-  --blue:#16447f; --blue2:#2458c7; --yellow:#f2ef00;
-  --red:#b9362d; --green:#6d7e45; --dark:#101827; --light:#f5f7fb;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;color:#182033;background:white;line-height:1.6}
-a{text-decoration:none;color:inherit}
-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);box-shadow:0 2px 18px #00000012}
-.nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 20px}
-.brand{display:flex;align-items:center;gap:12px;font-weight:900;color:var(--blue)}
-.brand img{width:58px;height:58px;object-fit:contain}
-.brand span{font-size:16px;line-height:1.05}
-nav{display:flex;gap:22px;align-items:center}
-nav a{font-weight:700;font-size:14px;color:#27344b}
-nav a:hover{color:var(--blue2)}
-.menu{display:none;border:0;background:var(--blue);color:#fff;border-radius:9px;padding:10px 12px;font-size:20px}
-.hero{background:linear-gradient(135deg,#0e3362,#2458c7);color:#fff;overflow:hidden}
-.hero-inner{max-width:1200px;margin:auto;min-height:620px;padding:70px 24px;display:grid;grid-template-columns:1.2fr .8fr;gap:35px;align-items:center}
-.badge{display:inline-block;background:#ffffff18;border:1px solid #ffffff44;border-radius:999px;padding:8px 14px;font-weight:800;font-size:13px;margin-bottom:18px}
-h1{font-size:clamp(42px,6vw,72px);line-height:.98;margin-bottom:20px;letter-spacing:-2px}
-.hero h1 span{color:var(--yellow)}
-.hero p{font-size:18px;max-width:650px;color:#eef5ff}
-.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{display:inline-block;padding:13px 19px;border-radius:10px;font-weight:900}
-.btn-primary{background:var(--yellow);color:#15233b}
-.btn-secondary{border:1px solid #ffffff66;background:#ffffff12}
-.hero-logo{display:flex;justify-content:center}
-.hero-logo img{width:min(420px,80vw);filter:drop-shadow(0 20px 25px #0005);background:#fff;border-radius:24px;padding:18px}
-section{padding:75px 20px}
-.container{max-width:1200px;margin:auto}
-.section-title{text-align:center;margin-bottom:45px}
-.section-title h2{font-size:36px;color:var(--blue);margin-bottom:8px}
-.section-title p{color:#68758a}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{padding:28px;background:white;border:1px solid #e4e9f1;border-radius:18px;box-shadow:0 8px 25px #17233b0b}
-.card .icon{font-size:34px;margin-bottom:12px}
-.card h3{color:var(--blue);margin-bottom:8px}
-.about{background:var(--light)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
-.about-box{background:#fff;border-radius:22px;padding:32px;box-shadow:0 10px 30px #17233b0b}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:25px}
-.stat{background:#f1f5fb;padding:18px;border-radius:14px;text-align:center}
-.stat strong{display:block;font-size:28px;color:var(--blue)}
-.news{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.news article{border-radius:18px;overflow:hidden;background:#fff;border:1px solid #e5e9ef}
-.news-top{height:130px;background:linear-gradient(135deg,var(--blue),var(--blue2));display:flex;align-items:center;justify-content:center;color:#fff;font-size:45px}
-.news article div:last-child{padding:22px}
-.contact{background:#0e203b;color:white}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
-.contact .section-title h2{color:white}
-.contact-info{display:grid;gap:14px}
-.contact-item{background:#ffffff0d;border:1px solid #ffffff1c;border-radius:14px;padding:18px}
-form{background:white;color:#182033;padding:25px;border-radius:18px}
-label{display:block;font-weight:800;font-size:13px;margin:12px 0 6px}
-input,textarea,select{width:100%;padding:12px;border:1px solid #d7deea;border-radius:9px;font:inherit}
-textarea{min-height:110px;resize:vertical}
-button{cursor:pointer}
-.form-btn{margin-top:15px;width:100%;border:0;background:var(--blue);color:white;padding:13px;border-radius:10px;font-weight:900}
-footer{background:#091426;color:#b9c5d8;padding:28px 20px;text-align:center;font-size:13px}
-.mobile-nav{display:none}
-@media(max-width:800px){
- nav{display:none}.menu{display:block}
- .nav.open nav{display:flex;position:absolute;top:78px;left:0;right:0;background:#fff;padding:18px 20px;flex-direction:column;box-shadow:0 8px 20px #0002}
- .hero-inner,.about-grid,.contact-grid{grid-template-columns:1fr}
- .hero-inner{padding-top:50px}.hero-logo{order:-1}
- .cards,.news{grid-template-columns:1fr}
- .stats{grid-template-columns:1fr}
-}
+:root{--navy:#071a3d;--blue:#0d47a1;--gold:#d4a72c;--bg:#f5f7fb;--text:#172033}
+*{box-sizing:border-box;scroll-behavior:smooth}body{margin:0;font-family:Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+header{position:sticky;top:0;z-index:10;background:#071a3df7;color:#fff;box-shadow:0 3px 15px #0003}.nav{max-width:1200px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800}.brand img{width:50px;height:50px;object-fit:contain;background:#fff;border-radius:8px}
+nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:#fff;text-decoration:none;font-weight:700;font-size:14px}nav a:hover{color:var(--gold)}
+.hero{min-height:620px;display:grid;place-items:center;text-align:center;color:#fff;padding:60px 20px;background:linear-gradient(135deg,#061536ee,#0d47a1dd)}
+.hero-inner{max-width:900px}.hero h1{font-size:clamp(40px,7vw,72px);margin:0}.hero p{font-size:20px;margin:15px auto 28px;max-width:760px}
+.btn{display:inline-block;padding:13px 22px;border-radius:8px;text-decoration:none;font-weight:800;margin:5px}.primary{background:var(--gold);color:#111}.light{background:#fff;color:var(--navy)}
+section{max-width:1200px;margin:auto;padding:70px 20px}.title{text-align:center;margin-bottom:38px}.title h2{font-size:34px;color:var(--navy);margin:0 0 8px}.title p{color:#596579}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}.card,.info{background:#fff;padding:27px;border-radius:15px;box-shadow:0 7px 25px #071a3d12;border:1px solid #e7ebf2}.card h3{color:var(--blue);margin-top:0}
+.classes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}.class{background:#edf3ff;border-left:5px solid var(--blue);padding:20px;border-radius:10px}.class strong{font-size:21px;color:var(--navy)}
+.badge{display:inline-block;background:#e9efff;color:var(--blue);padding:5px 10px;border-radius:20px;font-size:12px;font-weight:800;margin-bottom:8px}.notice{background:#fff8df;border:1px solid #ead28a;padding:15px;border-radius:9px;margin-top:20px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:25px}form{display:grid;gap:12px}input,textarea{width:100%;padding:13px;border:1px solid #ccd3df;border-radius:8px;font:inherit}textarea{min-height:130px}button{padding:13px;border:0;border-radius:8px;background:var(--blue);color:#fff;font-weight:800;cursor:pointer}
+footer{background:var(--navy);color:#fff;padding:45px 20px}.foot{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}footer a{color:#dbe7ff}
+@media(max-width:760px){nav{display:none}.contact{grid-template-columns:1fr}.hero{min-height:560px}}
 </style>
-</head>
+<style>
+.topbar{background:#030d20;color:#d8b65b;font-size:11px;letter-spacing:1px}.topinner{max-width:1200px;margin:auto;padding:7px 20px;display:flex;justify-content:space-between}
+.brand span{display:flex;flex-direction:column}.brand small{font-size:10px;letter-spacing:1px;font-weight:400;opacity:.75;margin-top:2px}
+.hero{background:linear-gradient(120deg,#050e21e8,#0b2d63dd),radial-gradient(circle at 80% 20%,#d4a72c33,transparent 35%);position:relative}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:90px;background:linear-gradient(transparent,var(--bg));pointer-events:none}.hero-inner{position:relative;z-index:1}.hero-logo{width:110px;height:110px;object-fit:contain;background:#fff;border-radius:12px;padding:8px;margin-bottom:20px;box-shadow:0 15px 40px #0005}.eyebrow{font-size:12px;letter-spacing:3px;font-weight:800;color:#e4c66e}.hero h1{font-family:Georgia,serif;line-height:1.05}.hero h1 span{color:#e4c66e}.section-title h2{font-family:Georgia,serif}.card h3{font-family:Georgia,serif}
+</style></head>
 <body>
-<header>
-  <div class="nav" id="nav">
-    <a class="brand" href="#accueil">
-      <img src="logo.png" alt="Logo Collège Le Pionnier">
-      <span>COLLÈGE<br>LE PIONNIER</span>
-    </a>
-    <nav>
-      <a href="#accueil">Accueil</a>
-      <a href="#ecole">L'école</a>
-      <a href="#formations">Formations</a>
-      <a href="#actualites">Actualités</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button class="menu" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Menu">☰</button>
-  </div>
-</header>
+<div class="topbar"><div class="topinner"><span>COLLÈGE LE PIONNIER</span><span>VILLE DE KOLWEZI, RDC</span></div></div>
+<header><div class="nav">
+<a class="brand" href="#accueil"><img src="assets/logo.png" alt="Logo du Collège Le Pionnier"><span><b>COLLÈGE LE PIONNIER</b><small>Éducation • Discipline • Excellence</small></span></a>
+<nav><a href="#accueil">Accueil</a><a href="#ecole">L'école</a><a href="#classes">Classes</a><a href="#formations">Formations</a><a href="#admission">Admission</a><a href="#actualites">Actualités</a><a href="#contact">Contact</a></nav>
+</div></header>
 
-<main>
-<section class="hero" id="accueil">
-  <div class="hero-inner">
-    <div>
-      <div class="badge">VILLE DE KOLWEZI • ÉTABLISSEMENT SCOLAIRE</div>
-      <h1>Bienvenue au <span>Collège Le Pionnier</span></h1>
-      <p>Un cadre d'apprentissage fondé sur le <strong>travail, la discipline et la réussite</strong>. Découvrez notre école, nos activités et toutes les informations utiles aux élèves et aux parents.</p>
-      <div class="cta">
-        <a class="btn btn-primary" href="#contact">Nous contacter</a>
-        <a class="btn btn-secondary" href="#ecole">Découvrir l'école</a>
-      </div>
-    </div>
-    <div class="hero-logo"><img src="assets/logo.png" alt="Emblème officiel du Collège Le Pionnier"></div>
-  </div>
-</section>
+<section id="accueil" class="hero"><div class="hero-inner"><img class="hero-logo" src="assets/logo.png" alt="Logo du Collège Le Pionnier">
+<span class="eyebrow">ÉTABLISSEMENT SCOLAIRE • KOLWEZI</span>
+<h1>Former aujourd’hui,<br><span>préparer demain.</span></h1>
+<p>Un cadre d’apprentissage fondé sur le travail, la discipline, les compétences et la réussite scolaire.</p>
+<a class="btn primary" href="#admission">Demander une admission</a><a class="btn light" href="#contact">Nous contacter</a>
+</div></section>
 
-<section id="ecole" class="about">
-<div class="container">
-  <div class="section-title"><h2>Notre établissement</h2><p>Une école tournée vers l'excellence et l'avenir.</p></div>
-  <div class="about-grid">
-    <div>
-      <h2>Travail • Discipline • Réussite</h2>
-      <p style="margin-top:15px">Le Collège Le Pionnier accompagne ses élèves dans leur parcours scolaire en mettant l'accent sur la rigueur, l'encadrement et le développement des compétences.</p>
-      <div class="stats">
-        <div class="stat"><strong>01</strong>Projet éducatif</div>
-        <div class="stat"><strong>03</strong>Valeurs clés</div>
-        <div class="stat"><strong>100%</strong>Engagement</div>
-      </div>
-    </div>
-    <div class="about-box">
-      <h3>Pourquoi choisir Le Pionnier ?</h3>
-      <p>✓ Encadrement scolaire</p>
-      <p>✓ Discipline et ponctualité</p>
-      <p>✓ Accompagnement des élèves</p>
-      <p>✓ Activités éducatives</p>
-      <p>✓ Communication avec les parents</p>
-    </div>
-  </div>
+<section id="ecole"><div class="title"><h2>Bienvenue au Collège Le Pionnier</h2><p>Une école au service de la formation de la jeunesse.</p></div>
+<div class="grid">
+<div class="card"><h3>Notre mission</h3><p>Accompagner chaque élève dans l'acquisition des connaissances, des compétences et des valeurs nécessaires à son parcours scolaire.</p></div>
+<div class="card"><h3>Notre vision</h3><p>Construire une école exigeante, moderne et accessible, préparant les apprenants à la poursuite de leurs études et à leur avenir professionnel.</p></div>
+<div class="card"><h3>Nos valeurs</h3><p>Travail, discipline, respect, responsabilité, intégrité et excellence.</p></div>
 </div>
+<div class="info" style="margin-top:22px"><h3>Localisation</h3><p><b>Adresse :</b> Le quartier ISTM, avenue Chefferie des BAYEKE, Ville de Kolwezi, RDC.</p><p><b>Téléphone :</b> +243 998 958 974</p></div>
 </section>
 
-<section id="formations">
-<div class="container">
-  <div class="section-title"><h2>Nos formations</h2><p>Présente ici les sections et options réellement proposées par l'établissement.</p></div>
-  <div class="cards">
-    <div class="card"><div class="icon">📘</div><h3>Enseignement général</h3><p>Un parcours scolaire structuré pour développer les bases académiques et préparer la suite des études.</p></div>
-    <div class="card"><div class="icon">🔬</div><h3>Sciences & techniques</h3><p>Des apprentissages orientés vers les sciences, la logique et la pratique.</p></div>
-    <div class="card"><div class="icon">🎓</div><h3>Préparation à la réussite</h3><p>Un accompagnement visant l'autonomie, la discipline et la préparation aux examens.</p></div>
-  </div>
-</div>
+<section id="classes"><div class="title"><h2>Organisation des classes</h2><p>Nomenclature actuelle de l'enseignement en RDC.</p></div>
+<div class="card" style="margin-bottom:22px"><h3>Cycle Terminal de l'Éducation de Base (CTEB)</h3><p>Le CTEB comprend la 7e et la 8e année de l'éducation de base.</p>
+<div class="classes"><div class="class"><span class="badge">CTEB</span><br><strong>7e année de l'éducation de base</strong></div><div class="class"><span class="badge">CTEB</span><br><strong>8e année de l'éducation de base</strong></div></div></div>
+<div class="card"><h3>Humanités</h3><p>Après le CTEB, les quatre années des humanités sont désignées :</p>
+<div class="classes"><div class="class"><span class="badge">HUMANITÉS</span><br><strong>1re année des humanités</strong></div><div class="class"><span class="badge">HUMANITÉS</span><br><strong>2e année des humanités</strong></div><div class="class"><span class="badge">HUMANITÉS</span><br><strong>3e année des humanités</strong></div><div class="class"><span class="badge">HUMANITÉS</span><br><strong>4e année des humanités</strong></div></div>
+<div class="notice">Les anciennes 3e, 4e, 5e et 6e secondaires correspondent respectivement aux 1re, 2e, 3e et 4e années des humanités.</div></div>
 </section>
 
-<section id="actualites" class="about">
-<div class="container">
-  <div class="section-title"><h2>Actualités & événements</h2><p>Les informations importantes de l'établissement.</p></div>
-  <div class="news">
-    <article><div class="news-top">📅</div><div><h3>Rentrée scolaire</h3><p>Retrouvez ici les dates et informations officielles concernant la rentrée.</p></div></article>
-    <article><div class="news-top">🏆</div><div><h3>Vie scolaire</h3><p>Découvrez les activités, projets et moments forts de la communauté scolaire.</p></div></article>
-    <article><div class="news-top">📢</div><div><h3>Annonces</h3><p>Les communications importantes seront publiées dans cette rubrique.</p></div></article>
-  </div>
-</div>
-</section>
+<section id="formations"><div class="title"><h2>Formations et parcours</h2><p>Les principaux parcours de l'enseignement secondaire.</p></div>
+<div class="grid"><div class="card"><h3>Éducation de base</h3><p>7e et 8e années du CTEB.</p></div><div class="card"><h3>Humanités générales</h3><p>Formation académique et théorique préparant notamment à la poursuite des études supérieures.</p></div><div class="card"><h3>Humanités techniques</h3><p>Formation technologique et appliquée.</p></div><div class="card"><h3>Humanités professionnelles</h3><p>Formation orientée vers les compétences pratiques et les métiers.</p></div></div></section>
 
-<section id="contact" class="contact">
-<div class="container">
-  <div class="section-title"><h2>Contactez-nous</h2><p>Pour toute information sur l'inscription ou la vie scolaire.</p></div>
-  <div class="contact-grid">
-    <div class="contact-info">
-      <div class="contact-item"><strong>📍 Adresse</strong><br>Ville de Kolwezi, République démocratique du Congo</div>
-      <div class="contact-item"><strong>📞 Téléphone</strong><br>À compléter avec le numéro officiel de l'école</div>
-      <div class="contact-item"><strong>✉️ E-mail</strong><br>À compléter avec l'adresse officielle</div>
-    </div>
-    <form id="contactForm">
-      <h3>Envoyer un message</h3>
-      <label>Nom complet</label><input id="nom" required>
-      <label>E-mail ou téléphone</label><input id="coord" required>
-      <label>Objet</label><select id="objet"><option>Demande d'information</option><option>Inscription</option><option>Rendez-vous</option><option>Autre</option></select>
-      <label>Message</label><textarea id="message" required></textarea>
-      <button class="form-btn">Enregistrer la demande</button>
-      <p id="status" style="margin-top:10px;font-size:13px"></p>
-    </form>
-  </div>
-</div>
-</section>
-</main>
+<section id="admission"><div class="title"><h2>Admissions et inscriptions</h2><p>Préparez votre demande d'inscription.</p></div>
+<div class="grid"><div class="card"><h3>1. Prendre contact</h3><p>Contactez l'administration au +243 998 958 974.</p></div><div class="card"><h3>2. Choisir le niveau</h3><p>7e ou 8e année de l'éducation de base, ou 1re à 4e année des humanités.</p></div><div class="card"><h3>3. Constituer le dossier</h3><p>L'administration vous communiquera les pièces et conditions nécessaires.</p></div></div></section>
 
-<footer>
-  © <span id="year"></span> Collège Le Pionnier — Ville de Kolwezi. Tous droits réservés.
-</footer>
+<section id="actualites"><div class="title"><h2>Actualités</h2><p>Informations et annonces du Collège Le Pionnier.</p></div>
+<div class="grid"><div class="card"><span class="badge">ÉCOLE</span><h3>Site officiel</h3><p>Retrouvez ici les informations importantes concernant la vie de l'établissement.</p></div><div class="card"><span class="badge">INSCRIPTIONS</span><h3>Admissions</h3><p>Contactez l'administration pour connaître les modalités d'inscription.</p></div><div class="card"><span class="badge">INFORMATION</span><h3>Nomenclature scolaire</h3><p>Le site utilise les appellations CTEB et Humanités conformément à la nomenclature officielle.</p></div></div></section>
 
+<section id="contact"><div class="title"><h2>Contact</h2><p>Le Collège Le Pionnier est à votre disposition.</p></div>
+<div class="contact"><div class="info"><h3>Coordonnées</h3><p><b>Collège Le Pionnier</b></p><p>Le quartier ISTM, avenue Chefferie des BAYEKE<br>Ville de Kolwezi, RDC</p><p><b>Téléphone :</b> <a href="tel:+243998958974">+243 998 958 974</a></p><p><b>WhatsApp :</b> <a href="https://wa.me/243998958974" target="_blank">Contacter l'école</a></p></div>
+<div class="info"><h3>Écrire à l'école</h3><form id="contactForm"><input id="nom" placeholder="Nom complet" required><input id="email" type="email" placeholder="Adresse e-mail" required><input id="sujet" placeholder="Objet" required><textarea id="message" placeholder="Votre message" required></textarea><button>Envoyer le message</button></form><p id="msg"></p></div></div></section>
+
+<footer><div class="foot"><div><h3>Collège Le Pionnier</h3><p>Ville de Kolwezi, République Démocratique du Congo.</p></div><div><h3>Navigation</h3><p><a href="#ecole">L'école</a><br><a href="#classes">Classes</a><br><a href="#admission">Admissions</a><br><a href="#contact">Contact</a></p></div><div><h3>Contact</h3><p>+243 998 958 974<br>Le quartier ISTM, avenue Chefferie des BAYEKE</p></div></div><p style="text-align:center;border-top:1px solid #ffffff33;padding-top:20px">© <span id="year"></span> Collège Le Pionnier. Tous droits réservés.</p></footer>
 <script>
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('contactForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  const data = {
-    nom: document.getElementById('nom').value,
-    coord: document.getElementById('coord').value,
-    objet: document.getElementById('objet').value,
-    message: document.getElementById('message').value,
-    date: new Date().toLocaleString('fr-FR')
-  };
-  const demandes = JSON.parse(localStorage.getItem('pionnier_demandes') || '[]');
-  demandes.push(data);
-  localStorage.setItem('pionnier_demandes', JSON.stringify(demandes));
-  document.getElementById('status').textContent = '✓ Votre demande a été enregistrée sur cet appareil.';
-  this.reset();
-});
+year.textContent=new Date().getFullYear();
+contactForm.addEventListener("submit",e=>{e.preventDefault();let a=JSON.parse(localStorage.getItem("pionnier_messages")||"[]");a.push({nom:nom.value,email:email.value,sujet:sujet.value,message:message.value,date:new Date().toISOString()});localStorage.setItem("pionnier_messages",JSON.stringify(a));msg.textContent="Votre message a été enregistré.";e.target.reset()});
 </script>
-</body>
-</html>
+</body></html>
