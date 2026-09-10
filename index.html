@@ -1,80 +1,116 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Site officiel du Collège Le Pionnier à Kolwezi, RDC.">
-<title>Collège Le Pionnier | Site officiel</title>
-<style>
-:root{--navy:#071a3d;--blue:#0d47a1;--gold:#d4a72c;--bg:#f5f7fb;--text:#172033}
-*{box-sizing:border-box;scroll-behavior:smooth}body{margin:0;font-family:Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
-header{position:sticky;top:0;z-index:10;background:#071a3df7;color:#fff;box-shadow:0 3px 15px #0003}.nav{max-width:1200px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800}.brand img{width:50px;height:50px;object-fit:contain;background:#fff;border-radius:8px}
-nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:#fff;text-decoration:none;font-weight:700;font-size:14px}nav a:hover{color:var(--gold)}
-.hero{min-height:620px;display:grid;place-items:center;text-align:center;color:#fff;padding:60px 20px;background:linear-gradient(135deg,#061536ee,#0d47a1dd)}
-.hero-inner{max-width:900px}.hero h1{font-size:clamp(40px,7vw,72px);margin:0}.hero p{font-size:20px;margin:15px auto 28px;max-width:760px}
-.btn{display:inline-block;padding:13px 22px;border-radius:8px;text-decoration:none;font-weight:800;margin:5px}.primary{background:var(--gold);color:#111}.light{background:#fff;color:var(--navy)}
-section{max-width:1200px;margin:auto;padding:70px 20px}.title{text-align:center;margin-bottom:38px}.title h2{font-size:34px;color:var(--navy);margin:0 0 8px}.title p{color:#596579}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}.card,.info{background:#fff;padding:27px;border-radius:15px;box-shadow:0 7px 25px #071a3d12;border:1px solid #e7ebf2}.card h3{color:var(--blue);margin-top:0}
-.classes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}.class{background:#edf3ff;border-left:5px solid var(--blue);padding:20px;border-radius:10px}.class strong{font-size:21px;color:var(--navy)}
-.badge{display:inline-block;background:#e9efff;color:var(--blue);padding:5px 10px;border-radius:20px;font-size:12px;font-weight:800;margin-bottom:8px}.notice{background:#fff8df;border:1px solid #ead28a;padding:15px;border-radius:9px;margin-top:20px}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:25px}form{display:grid;gap:12px}input,textarea{width:100%;padding:13px;border:1px solid #ccd3df;border-radius:8px;font:inherit}textarea{min-height:130px}button{padding:13px;border:0;border-radius:8px;background:var(--blue);color:#fff;font-weight:800;cursor:pointer}
-footer{background:var(--navy);color:#fff;padding:45px 20px}.foot{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px}footer a{color:#dbe7ff}
-@media(max-width:760px){nav{display:none}.contact{grid-template-columns:1fr}.hero{min-height:560px}}
-</style>
-<style>
-.topbar{background:#030d20;color:#d8b65b;font-size:11px;letter-spacing:1px}.topinner{max-width:1200px;margin:auto;padding:7px 20px;display:flex;justify-content:space-between}
-.brand span{display:flex;flex-direction:column}.brand small{font-size:10px;letter-spacing:1px;font-weight:400;opacity:.75;margin-top:2px}
-.hero{background:linear-gradient(120deg,#050e21e8,#0b2d63dd),radial-gradient(circle at 80% 20%,#d4a72c33,transparent 35%);position:relative}
-.hero:after{content:"";position:absolute;inset:auto 0 0;height:90px;background:linear-gradient(transparent,var(--bg));pointer-events:none}.hero-inner{position:relative;z-index:1}.hero-logo{width:110px;height:110px;object-fit:contain;background:#fff;border-radius:12px;padding:8px;margin-bottom:20px;box-shadow:0 15px 40px #0005}.eyebrow{font-size:12px;letter-spacing:3px;font-weight:800;color:#e4c66e}.hero h1{font-family:Georgia,serif;line-height:1.05}.hero h1 span{color:#e4c66e}.section-title h2{font-family:Georgia,serif}.card h3{font-family:Georgia,serif}
-</style></head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#123b70">
+<title>Collège Le Pionnier — Gestion scolaire</title>
+<link rel="stylesheet" href="style.css">
+</head>
 <body>
-<div class="topbar"><div class="topinner"><span>COLLÈGE LE PIONNIER</span><span>VILLE DE KOLWEZI, RDC</span></div></div>
-<header><div class="nav">
-<a class="brand" href="#accueil"><img src="assets/logo.png" alt="Logo du Collège Le Pionnier"><span><b>COLLÈGE LE PIONNIER</b><small>Éducation • Discipline • Excellence</small></span></a>
-<nav><a href="#accueil">Accueil</a><a href="#ecole">L'école</a><a href="#classes">Classes</a><a href="#formations">Formations</a><a href="#admission">Admission</a><a href="#actualites">Actualités</a><a href="#contact">Contact</a></nav>
-</div></header>
-
-<section id="accueil" class="hero"><div class="hero-inner"><img class="hero-logo" src="assets/logo.png" alt="Logo du Collège Le Pionnier">
-<span class="eyebrow">ÉTABLISSEMENT SCOLAIRE • KOLWEZI</span>
-<h1>Former aujourd’hui,<br><span>préparer demain.</span></h1>
-<p>Un cadre d’apprentissage fondé sur le travail, la discipline, les compétences et la réussite scolaire.</p>
-<a class="btn primary" href="#admission">Demander une admission</a><a class="btn light" href="#contact">Nous contacter</a>
-</div></section>
-
-<section id="ecole"><div class="title"><h2>Bienvenue au Collège Le Pionnier</h2><p>Une école au service de la formation de la jeunesse.</p></div>
-<div class="grid">
-<div class="card"><h3>Notre mission</h3><p>Accompagner chaque élève dans l'acquisition des connaissances, des compétences et des valeurs nécessaires à son parcours scolaire.</p></div>
-<div class="card"><h3>Notre vision</h3><p>Construire une école exigeante, moderne et accessible, préparant les apprenants à la poursuite de leurs études et à leur avenir professionnel.</p></div>
-<div class="card"><h3>Nos valeurs</h3><p>Travail, discipline, respect, responsabilité, intégrité et excellence.</p></div>
+<div id="loginScreen" class="login-screen">
+  <div class="login-card">
+    <div class="brand-mark">LP</div>
+    <h1>Collège Le Pionnier</h1>
+    <p>Portail de gestion scolaire</p>
+    <input id="loginUser" placeholder="Identifiant" value="admin">
+    <input id="loginPass" type="password" placeholder="Mot de passe" value="pionnier">
+    <button class="primary full" onclick="login()">Se connecter</button>
+    <small>Démo : admin / pionnier</small>
+  </div>
 </div>
-<div class="info" style="margin-top:22px"><h3>Localisation</h3><p><b>Adresse :</b> Le quartier ISTM, avenue Chefferie des BAYEKE, Ville de Kolwezi, RDC.</p><p><b>Téléphone :</b> +243 998 958 974</p></div>
-</section>
 
-<section id="classes"><div class="title"><h2>Organisation des classes</h2><p>Nomenclature actuelle de l'enseignement en RDC.</p></div>
-<div class="card" style="margin-bottom:22px"><h3>Cycle Terminal de l'Éducation de Base (CTEB)</h3><p>Le CTEB comprend la 7e et la 8e année de l'éducation de base.</p>
-<div class="classes"><div class="class"><span class="badge">CTEB</span><br><strong>7e année de l'éducation de base</strong></div><div class="class"><span class="badge">CTEB</span><br><strong>8e année de l'éducation de base</strong></div></div></div>
-<div class="card"><h3>Humanités</h3><p>Après le CTEB, les quatre années des humanités sont désignées :</p>
-<div class="classes"><div class="class"><span class="badge">HUMANITÉS</span><br><strong>1re année des humanités</strong></div><div class="class"><span class="badge">HUMANITÉS PROFESSIONELLE</span><br><strong>2e année des humanités</strong></div><div class="class"><span class="badge">HUMANITÉS</span><br><strong>3e année des humanités</strong></div><div class="class"><span class="badge">HUMANITÉS</span><br><strong>4e année des humanités</strong></div></div>
-<div class="notice">Les anciennes 3e, 4e, 5e et 6e secondaires correspondent respectivement aux 1re, 2e, 3e et 4e années des humanités.</div></div>
-</section>
+<div id="app" class="hidden">
+<header class="topbar">
+  <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+  <div class="top-brand"><span class="logo">LP</span><span>Collège Le Pionnier</span></div>
+  <div class="top-actions">
+    <button onclick="toggleTheme()" title="Changer de thème">◐</button>
+    <button onclick="openModal('settingsModal')" title="Paramètres">⚙</button>
+    <span class="admin-pill">Administrateur</span>
+  </div>
+</header>
 
-<section id="formations"><div class="title"><h2>Formations et parcours</h2><p>Les principaux parcours de l'enseignement secondaire.</p></div>
-<div class="grid"><div class="card"><h3>Éducation de base</h3><p>7e et 8e années du CTEB.</p></div><div class="card"><h3>Humanités générales</h3><p>Formation académique et théorique préparant notamment à la poursuite des études supérieures.</p></div><div class="card"><h3>Humanités techniques</h3><p>Formation technologique et appliquée.</p></div><div class="card"><h3>Humanités professionnelles</h3><p>Formation orientée vers les compétences pratiques et les métiers.</p></div></div></section>
+<div class="layout">
+<aside id="sidebar">
+  <nav>
+    <button class="nav-item active" data-page="dashboard" onclick="showPage('dashboard')">▦ <span>Tableau de bord</span></button>
+    <button class="nav-item" data-page="students" onclick="showPage('students')">♙ <span>Élèves</span></button>
+    <button class="nav-item" data-page="teachers" onclick="showPage('teachers')">♧ <span>Enseignants</span></button>
+    <button class="nav-item" data-page="classes" onclick="showPage('classes')">▤ <span>Classes</span></button>
+    <button class="nav-item" data-page="payments" onclick="showPage('payments')">▣ <span>Frais & paiements</span></button>
+    <button class="nav-item" data-page="registrations" onclick="showPage('registrations')">✎ <span>Inscriptions</span></button>
+    <button class="nav-item" data-page="grades" onclick="showPage('grades')">★ <span>Notes & résultats</span></button>
+    <button class="nav-item" data-page="announcements" onclick="showPage('announcements')">◉ <span>Annonces</span></button>
+    <button class="nav-item" data-page="public" onclick="showPage('public')">⌂ <span>Site public</span></button>
+  </nav>
+  <div class="side-bottom">
+    <button class="nav-item" onclick="exportData()">⇩ <span>Exporter les données</span></button>
+    <button class="nav-item" onclick="document.getElementById('importFile').click()">⇧ <span>Importer</span></button>
+    <input id="importFile" type="file" accept=".json" hidden onchange="importData(event)">
+    <button class="nav-item danger-text" onclick="logout()">↪ <span>Déconnexion</span></button>
+  </div>
+</aside>
 
-<section id="admission"><div class="title"><h2>Admissions et inscriptions</h2><p>Préparez votre demande d'inscription.</p></div>
-<div class="grid"><div class="card"><h3>1. Prendre contact</h3><p>Contactez l'administration au +243 998 958 974.</p></div><div class="card"><h3>2. Choisir le niveau</h3><p>7e ou 8e année de l'éducation de base, ou 1re à 4e année des humanités.</p></div><div class="card"><h3>3. Constituer le dossier</h3><p>L'administration vous communiquera les pièces et conditions nécessaires.</p></div></div></section>
+<main id="main"></main>
+</div>
+</div>
 
-<section id="actualites"><div class="title"><h2>Actualités</h2><p>Informations et annonces du Collège Le Pionnier.</p></div>
-<div class="grid"><div class="card"><span class="badge">ÉCOLE</span><h3>Site officiel</h3><p>Retrouvez ici les informations importantes concernant la vie de l'établissement.</p></div><div class="card"><span class="badge">INSCRIPTIONS</span><h3>Admissions</h3><p>Contactez l'administration pour connaître les modalités d'inscription.</p></div><div class="card"><span class="badge">INFORMATION</span><h3>Nomenclature scolaire</h3><p>Le site utilise les appellations CTEB et Humanités conformément à la nomenclature officielle.</p></div></div></section>
+<div id="toast"></div>
 
-<section id="contact"><div class="title"><h2>Contact</h2><p>Le Collège Le Pionnier est à votre disposition.</p></div>
-<div class="contact"><div class="info"><h3>Coordonnées</h3><p><b>Collège Le Pionnier</b></p><p>Le quartier ISTM, avenue Chefferie des BAYEKE<br>Ville de Kolwezi, RDC</p><p><b>Téléphone :</b> <a href="tel:+243998958974">+243 998 958 974</a></p><p><b>WhatsApp :</b> <a href="https://wa.me/243998958974" target="_blank">Contacter l'école</a></p></div>
-<div class="info"><h3>Écrire à l'école</h3><form id="contactForm"><input id="nom" placeholder="Nom complet" required><input id="email" type="email" placeholder="Adresse e-mail" required><input id="sujet" placeholder="Objet" required><textarea id="message" placeholder="Votre message" required></textarea><button>Envoyer le message</button></form><p id="msg"></p></div></div></section>
+<div id="studentModal" class="modal"><div class="modal-card">
+  <div class="modal-head"><h2 id="studentModalTitle">Ajouter un élève</h2><button onclick="closeModal('studentModal')">×</button></div>
+  <div class="form-grid">
+    <input id="sName" placeholder="Nom complet">
+    <input id="sBirth" type="date" title="Date de naissance">
+    <select id="sSex"><option value="">Sexe</option><option>Masculin</option><option>Féminin</option></select>
+    <select id="sClass"></select>
+    <input id="sParent" placeholder="Nom du responsable">
+    <input id="sPhone" placeholder="Téléphone du responsable">
+  </div>
+  <button class="primary" onclick="saveStudent()">Enregistrer</button>
+</div></div>
 
-<footer><div class="foot"><div><h3>Collège Le Pionnier</h3><p>Ville de Kolwezi, République Démocratique du Congo.</p></div><div><h3>Navigation</h3><p><a href="#ecole">L'école</a><br><a href="#classes">Classes</a><br><a href="#admission">Admissions</a><br><a href="#contact">Contact</a></p></div><div><h3>Contact</h3><p>+243 998 958 974<br>Le quartier ISTM, avenue Chefferie des BAYEKE</p></div></div><p style="text-align:center;border-top:1px solid #ffffff33;padding-top:20px">© <span id="year"></span> Collège Le Pionnier. Tous droits réservés.</p></footer>
-<script>
-year.textContent=new Date().getFullYear();
-contactForm.addEventListener("submit",e=>{e.preventDefault();let a=JSON.parse(localStorage.getItem("pionnier_messages")||"[]");a.push({nom:nom.value,email:email.value,sujet:sujet.value,message:message.value,date:new Date().toISOString()});localStorage.setItem("pionnier_messages",JSON.stringify(a));msg.textContent="Votre message a été enregistré.";e.target.reset()});
-</script>
-</body></html>
+<div id="paymentModal" class="modal"><div class="modal-card">
+  <div class="modal-head"><h2>Enregistrer un paiement</h2><button onclick="closeModal('paymentModal')">×</button></div>
+  <div class="form-grid">
+    <select id="pStudent"></select>
+    <input id="pAmount" type="number" min="0" placeholder="Montant payé (FC)">
+    <input id="pDate" type="date">
+    <select id="pMethod"><option>Espèces</option><option>Mobile Money</option><option>Virement</option><option>Autre</option></select>
+    <input id="pRef" placeholder="Référence / reçu">
+  </div>
+  <button class="primary" onclick="savePayment()">Valider le paiement</button>
+</div></div>
+
+<div id="registrationModal" class="modal"><div class="modal-card">
+  <div class="modal-head"><h2>Nouvelle inscription</h2><button onclick="closeModal('registrationModal')">×</button></div>
+  <div class="form-grid">
+    <input id="rName" placeholder="Nom complet de l'élève">
+    <input id="rBirth" type="date">
+    <input id="rParent" placeholder="Responsable">
+    <input id="rPhone" placeholder="Téléphone">
+    <select id="rClass"></select>
+    <select id="rOption"><option>Générale</option><option>GÉO-MINE</option><option>Laboratoire chimique</option><option>Laboratoire électrique</option><option>Commercial et gestion</option><option>Humanité pédagogique</option><option>Mécanique générale</option></select>
+  </div>
+  <button class="primary" onclick="saveRegistration()">Enregistrer l'inscription</button>
+</div></div>
+
+<div id="announcementModal" class="modal"><div class="modal-card">
+  <div class="modal-head"><h2>Nouvelle annonce</h2><button onclick="closeModal('announcementModal')">×</button></div>
+  <input id="aTitle" placeholder="Titre">
+  <textarea id="aText" placeholder="Contenu de l'annonce"></textarea>
+  <button class="primary" onclick="saveAnnouncement()">Publier</button>
+</div></div>
+
+<div id="settingsModal" class="modal"><div class="modal-card">
+  <div class="modal-head"><h2>Paramètres</h2><button onclick="closeModal('settingsModal')">×</button></div>
+  <label>Nom de l'établissement</label><input id="schoolName" value="Collège Le Pionnier">
+  <label>Devise</label><input id="schoolCurrency" value="FC">
+  <label>Frais scolaires annuels par défaut</label><input id="defaultFees" type="number" value="1200000">
+  <button class="primary" onclick="saveSettings()">Sauvegarder</button>
+</div></div>
+
+<script src="app.js"></script>
+</body>
+</html>
