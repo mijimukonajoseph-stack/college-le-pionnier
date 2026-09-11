@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site officiel du Collège Le Pionnier — Maternelle, Primaire et Secondaire.">
+  <title>Collège Le Pionnier | Éducation, Discipline, Réussite</title>
+  <style>
+    :root{
+      --navy:#071a33; --navy2:#0d2b50; --gold:#c9a227; --light:#f5f7fa;
+      --text:#172033; --muted:#64748b; --white:#fff; --line:#e5e7eb;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--text);background:var(--light);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .topbar{background:#041225;color:#dbe5f0;padding:8px 5%;font-size:13px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+    .nav{max-width:1200px;margin:auto;padding:15px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--navy)}
+    .logo{width:48px;height:48px;border-radius:12px;background:var(--navy);display:grid;place-items:center;color:var(--gold);font-weight:900;border:2px solid var(--gold)}
+    .brand small{display:block;color:var(--muted);font-weight:500;font-size:11px}
+    .menu{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:650}
+    .menu a:hover{color:var(--gold)}
+    .btn{display:inline-block;background:var(--gold);color:#111;padding:11px 18px;border-radius:7px;font-weight:800;border:0;cursor:pointer}
+    .btn.dark{background:var(--navy);color:#fff}
+    .hamb{display:none;border:0;background:none;font-size:25px;color:var(--navy)}
+    .hero{background:linear-gradient(120deg,rgba(7,26,51,.98),rgba(13,43,80,.88)),url('images/campus.jpg') center/cover;min-height:620px;color:white;display:flex;align-items:center}
+    .hero-inner{max-width:1200px;width:100%;margin:auto;padding:80px 5%}
+    .eyebrow{color:var(--gold);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:13px}
+    h1{font-size:clamp(40px,6vw,72px);line-height:1.05;max-width:800px;margin:15px 0 20px}
+    .hero p{max-width:680px;color:#dbe5f0;font-size:18px}
+    .actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+    .section{padding:80px 5%}
+    .container{max-width:1200px;margin:auto}
+    .heading{text-align:center;max-width:720px;margin:0 auto 45px}
+    .heading h2{font-size:36px;color:var(--navy);margin-bottom:10px}
+    .heading p{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:white;border:1px solid var(--line);border-radius:14px;padding:28px;box-shadow:0 8px 25px rgba(7,26,51,.05)}
+    .card h3{color:var(--navy);margin:10px 0}
+    .icon{width:48px;height:48px;border-radius:10px;background:#fff8dc;border:1px solid #ead58a;color:#8b6c00;display:grid;place-items:center;font-weight:900}
+    .stats{background:var(--navy);color:white}
+    .stats .grid{grid-template-columns:repeat(4,1fr)}
+    .stat{text-align:center;padding:20px}.stat strong{display:block;font-size:35px;color:var(--gold)}.stat span{color:#cbd5e1}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+    .about-box{background:var(--navy);min-height:360px;border-radius:18px;padding:40px;color:#fff;display:flex;align-items:end;background:linear-gradient(145deg,#0d2b50,#071a33)}
+    .about-box h3{font-size:30px}
+    .options{grid-template-columns:repeat(4,1fr)}
+    .option{padding:22px;background:#fff;border-left:4px solid var(--gold);border-radius:8px;box-shadow:0 5px 18px rgba(0,0,0,.05);font-weight:750}
+    .news{grid-template-columns:repeat(3,1fr)}
+    .news article{background:white;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+    .news-img{height:150px;background:linear-gradient(135deg,#0d2b50,#132f52);display:grid;place-items:center;color:var(--gold);font-size:20px;font-weight:800}
+    .news-content{padding:22px}.news-content small{color:var(--muted)}
+    .admission{background:linear-gradient(120deg,#071a33,#0d2b50);color:white;border-radius:18px;padding:50px}
+    .admission h2{font-size:36px;margin-bottom:12px}.admission p{color:#dbe5f0;max-width:760px}
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+    form{background:white;padding:28px;border:1px solid var(--line);border-radius:14px}
+    input,textarea,select{width:100%;padding:13px;margin:7px 0 15px;border:1px solid #cbd5e1;border-radius:7px;font:inherit}
+    textarea{min-height:120px;resize:vertical}
+    footer{background:#041225;color:#cbd5e1;padding:50px 5% 20px}
+    .footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
+    footer h3,footer h4{color:#fff;margin-bottom:14px} footer a{display:block;margin:7px 0;color:#cbd5e1}
+    .copy{max-width:1200px;margin:35px auto 0;padding-top:18px;border-top:1px solid #24344b;font-size:13px;text-align:center}
+    .notice{background:#fff8dc;border-left:4px solid var(--gold);padding:15px;border-radius:6px;margin-top:20px;color:#5d4b00}
+    @media(max-width:850px){
+      .menu{display:none;position:absolute;top:79px;left:0;right:0;background:white;padding:20px 5%;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}
+      .menu.open{display:flex}.hamb{display:block}
+      .grid,.stats .grid,.news,.options{grid-template-columns:1fr 1fr}
+      .about,.contact,.footer-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:560px){
+      .grid,.stats .grid,.news,.options{grid-template-columns:1fr}
+      .hero{min-height:560px}.section{padding:60px 5%}.admission{padding:30px 22px}
+      .topbar{justify-content:center;text-align:center}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <span>Collège Le Pionnier — Quartier ISTM, Avenue Chefferie des Bayeke</span>
+    <span>Inscriptions : ouvertes — places limitées</span>
+  </div>
+
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#accueil">
+        <div class="logo">LP</div>
+        <div>COLLÈGE LE PIONNIER<small>Travail • Discipline • Réussite</small></div>
+      </a>
+      <button class="hamb" aria-label="Ouvrir le menu" onclick="toggleMenu()">☰</button>
+      <div class="menu" id="menu">
+        <a href="#accueil">Accueil</a>
+        <a href="#ecole">L'école</a>
+        <a href="#sections">Sections</a>
+        <a href="#options">Options</a>
+        <a href="#actualites">Actualités</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#contact" class="btn">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-inner">
+        <div class="eyebrow">Site officiel</div>
+        <h1>L'éducation qui prépare l'avenir.</h1>
+        <p>Le Collège Le Pionnier accompagne chaque élève dans un environnement fondé sur le travail, la discipline, la connaissance et la réussite.</p>
+        <div class="actions">
+          <a class="btn" href="#admissions">S'inscrire</a>
+          <a class="btn dark" href="#ecole">Découvrir l'école</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section stats">
+      <div class="container">
+        <div class="grid">
+          <div class="stat"><strong>3</strong><span>Sections scolaires</span></div>
+          <div class="stat"><strong>7</strong><span>Options au secondaire</span></div>
+          <div class="stat"><strong>1</strong><span>Objectif : la réussite</span></div>
+          <div class="stat"><strong>2026</strong><span>Année scolaire</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ecole">
+      <div class="container about">
+        <div class="about-box">
+          <div><div class="eyebrow">Notre établissement</div><h3>Une école tournée vers l'avenir.</h3></div>
+        </div>
+        <div>
+          <div class="eyebrow">Le Collège Le Pionnier</div>
+          <h2 style="font-size:38px;color:var(--navy);margin:10px 0 15px">Former, encadrer, préparer.</h2>
+          <p>Notre établissement propose un parcours scolaire structuré de la maternelle au secondaire, avec une attention particulière portée à l'encadrement, à la discipline et à la préparation des jeunes à leur avenir académique et professionnel.</p>
+          <div class="notice"><strong>Notre engagement :</strong> donner à chaque élève les bases nécessaires pour progresser et construire son avenir.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sections" style="background:#eef2f7">
+      <div class="container">
+        <div class="heading">
+          <div class="eyebrow">Parcours scolaire</div>
+          <h2>Nos sections</h2>
+          <p>Un parcours complet adapté aux différentes étapes de la scolarité.</p>
+        </div>
+        <div class="grid">
+          <div class="card"><div class="icon">01</div><h3>Maternelle</h3><p>Un environnement adapté aux premières années d'apprentissage, à l'éveil et au développement de l'enfant.</p></div>
+          <div class="card"><div class="icon">02</div><h3>Primaire</h3><p>Consolidation des fondamentaux, développement des compétences et accompagnement scolaire.</p></div>
+          <div class="card"><div class="icon">03</div><h3>Secondaire</h3><p>Formation générale et technique avec plusieurs options permettant de préparer différents projets d'avenir.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="options">
+      <div class="container">
+        <div class="heading">
+          <div class="eyebrow">Secondaire</div>
+          <h2>Nos options</h2>
+          <p>Des filières pensées pour développer des compétences académiques, techniques et professionnelles.</p>
+        </div>
+        <div class="grid options">
+          <div class="option">Géomine</div>
+          <div class="option">Électricité</div>
+          <div class="option">Commercial &amp; Gestion</div>
+          <div class="option">Pédagogie</div>
+          <div class="option">Mécanique générale</div>
+          <div class="option">Métallurgie</div>
+          <div class="option">Scientifique</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="actualites" style="background:#eef2f7">
+      <div class="container">
+        <div class="heading">
+          <div class="eyebrow">Vie scolaire</div>
+          <h2>Actualités &amp; annonces</h2>
+          <p>Les informations importantes de l'établissement seront publiées ici.</p>
+        </div>
+        <div class="grid news">
+          <article><div class="news-img">INSCRIPTIONS</div><div class="news-content"><small>Annonce</small><h3>Les inscriptions continuent</h3><p>Les inscriptions sont ouvertes. Les places étant limitées, nous invitons les parents à effectuer les démarches dans les meilleurs délais.</p></div></article>
+          <article><div class="news-img">RENTRÉE 2026</div><div class="news-content"><small>Année scolaire</small><h3>Une nouvelle année commence</h3><p>Retrouvez sur cette plateforme les informations utiles concernant l'organisation de l'année scolaire.</p></div></article>
+          <article><div class="news-img">ACTIVITÉS</div><div class="news-content"><small>Vie de l'école</small><h3>Les activités du Collège</h3><p>Cette section pourra être mise à jour avec les événements, projets et activités organisés par l'établissement.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="admissions">
+      <div class="container">
+        <div class="admission">
+          <div class="eyebrow">Admissions</div>
+          <h2>Les inscriptions sont ouvertes.</h2>
+          <p>Pour connaître les conditions d'inscription, les documents à fournir et les informations relatives aux frais scolaires, contactez directement l'administration du Collège.</p>
+          <div class="actions">
+            <a class="btn" href="#contact">Demander des informations</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="heading">
+          <div class="eyebrow">Nous contacter</div>
+          <h2>Parlons de votre inscription</h2>
+          <p>Remplissez le formulaire ci-dessous. Il pourra ensuite être connecté à une véritable boîte e-mail ou à WhatsApp.</p>
+        </div>
+        <div class="contact">
+          <div class="card">
+            <h3>Collège Le Pionnier</h3>
+            <p><strong>Adresse</strong><br>Quartier ISTM, Avenue Chefferie des Bayeke</p><br>
+            <p><strong>Téléphone</strong><br>À compléter</p><br>
+            <p><strong>E-mail</strong><br>À compléter</p><br>
+            <p><strong>Horaires</strong><br>Lundi — Samedi : à compléter</p>
+          </div>
+          <form onsubmit="sendForm(event)">
+            <label>Nom complet</label>
+            <input id="nom" required placeholder="Votre nom">
+            <label>Téléphone</label>
+            <input id="tel" required placeholder="Votre numéro">
+            <label>Objet</label>
+            <select id="objet"><option>Demande d'inscription</option><option>Informations générales</option><option>Autre demande</option></select>
+            <label>Message</label>
+            <textarea id="message" required placeholder="Votre message"></textarea>
+            <button class="btn dark" type="submit">Envoyer la demande</button>
+            <p id="formMsg" style="margin-top:12px;color:var(--muted);font-size:13px"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>COLLÈGE LE PIONNIER</h3>
+        <p>Travail • Discipline • Réussite</p>
+        <p style="margin-top:10px">Un établissement engagé dans la formation et l'accompagnement des jeunes.</p>
+      </div>
+      <div><h4>Navigation</h4><a href="#ecole">L'école</a><a href="#sections">Sections</a><a href="#options">Options</a><a href="#admissions">Admissions</a></div>
+      <div><h4>Contact</h4><p>Quartier ISTM<br>Avenue Chefferie des Bayeke</p><a href="#contact">Nous contacter</a></div>
+    </div>
+    <div class="copy">© 2026 Collège Le Pionnier — Tous droits réservés. <span id="developer">Site conçu et développé par Joseph Miji Mukona.</span></div>
+  </footer>
+
+  <script>
+    function toggleMenu(){document.getElementById('menu').classList.toggle('open')}
+    document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open')));
+    function sendForm(e){
+      e.preventDefault();
+      const nom=document.getElementById('nom').value;
+      document.getElementById('formMsg').textContent="Merci "+nom+" ! Votre demande a été préparée. Pour l'envoi réel, connectez ce formulaire à l'e-mail, WhatsApp ou au système d'administration de l'école.";
+    }
+  </script>
+</body>
+</html>
