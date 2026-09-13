@@ -1,154 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Collège Le Pionnier — établissement scolaire de la maternelle au secondaire. Travail, discipline et réussite.">
-  <title>Collège Le Pionnier | Site officiel</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Collège Le Pionnier | Kolwezi</title>
+<style>
+:root{--navy:#071b33;--blue:#12395d;--gold:#b79a5a;--light:#f5f4ef;--text:#17202a;--muted:#667383}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.7}h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500;line-height:1.15}a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}.top{background:var(--navy);color:#dce5ee;font-size:13px;padding:8px 0}.top .container{display:flex;justify-content:space-between}
+header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #ddd}.nav{height:84px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:14px}.brand img{width:58px;height:58px;object-fit:contain}.brand b{display:block;color:var(--navy);font:600 20px Georgia,serif}.brand span{display:block;color:var(--muted);font-size:10px;letter-spacing:1.5px;text-transform:uppercase}
+nav{display:flex;gap:25px;align-items:center}nav a{font-size:14px;font-weight:600}nav a:hover{color:var(--gold)}.admit{background:var(--navy);color:white!important;padding:12px 18px}
+.hero{min-height:650px;background:linear-gradient(90deg,rgba(7,27,51,.96),rgba(7,27,51,.68),rgba(7,27,51,.18)),url("assets/hero.svg") center/cover;display:flex;align-items:center;color:white}.hero-content{max-width:760px;padding:90px 0}.eyebrow{color:var(--gold);font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase}.hero h1{font-size:clamp(44px,6vw,76px);margin:18px 0}.hero p{font-size:18px;max-width:650px;color:#eef2f6}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{padding:14px 23px;font-weight:700;font-size:14px;border:1px solid white}.white{background:white;color:var(--navy)}.outline{color:white}
+section{padding:88px 0}.light{background:var(--light)}.intro{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.photo{min-height:420px;background:url("assets/school.svg") center/cover}.copy h2,.head h2{font-size:44px;color:var(--navy);margin:12px 0 18px}.copy p,.head p{color:var(--muted)}.rule{width:65px;height:2px;background:var(--gold);margin:24px 0}.head{max-width:720px;margin-bottom:42px}.head h2{margin-top:12px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:white;border:1px solid #dfe3e8;padding:32px;min-height:220px}.card .num{color:var(--gold);font-weight:bold}.card h3{font-size:28px;color:var(--navy);margin:15px 0}.card p{color:var(--muted);font-size:15px}
+.options{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}.option{background:var(--navy);color:#fff;padding:28px 22px;min-height:145px;display:flex;flex-direction:column;justify-content:space-between;transition:.2s}.option:hover{transform:translateY(-4px);background:var(--blue)}.option small{color:#d8c18e;letter-spacing:1.5px;text-transform:uppercase}.option strong{font:500 23px Georgia,serif}
+.quote{background:var(--navy);color:white;text-align:center}.quote p{font:italic 28px Georgia,serif;max-width:850px;margin:auto}.quote small{color:#d8c18e;letter-spacing:2px}
+.admissions{background:var(--light)}.adbox{background:white;border:1px solid #ddd;padding:42px;display:flex;justify-content:space-between;align-items:center;gap:25px}.adbox h2{font-size:40px;color:var(--navy);margin:10px 0}.gold{background:var(--gold);color:white;border:0}
+footer{background:#06172b;color:#cbd5df;padding:60px 0 22px}.foot{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:45px}.foot h3{color:white;font-size:23px}.foot p,.foot li{font-size:14px;color:#aebbc9}.foot ul{list-style:none;padding:0}.bottom{border-top:1px solid #1d3550;margin-top:40px;padding-top:18px;font-size:12px}
+@media(max-width:850px){nav{display:none}.intro,.cards{grid-template-columns:1fr}.options{grid-template-columns:1fr 1fr}.adbox{display:block}}
+@media(max-width:560px){.top .container{display:block;text-align:center}.hero{min-height:590px}.hero h1{font-size:45px}.hero p{font-size:16px}.options{grid-template-columns:1fr}.foot{grid-template-columns:1fr}.adbox h2{font-size:32px}}
+</style>
 </head>
 <body>
-<header class="site-header">
-  <div class="topbar">
-    <span>Quartier ISTM, Avenue Chefferie des Bayeke</span>
-    <span>Inscriptions ouvertes — places limitées</span>
-  </div>
-  <nav class="nav container">
-    <a class="brand" href="#accueil">
-      <span class="brand-mark">LP</span>
-      <span><strong>COLLÈGE LE PIONNIER</strong><small>Travail • Discipline • Réussite</small></span>
-    </a>
-    <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
-    <div class="nav-links">
-      <a href="#accueil">Accueil</a><a href="#ecole">L'école</a><a href="#sections">Sections</a>
-      <a href="#options">Options</a><a href="#galerie">Galerie</a><a href="#actualites">Actualités</a>
-      <a href="#inscriptions" class="nav-cta">Inscriptions</a>
-    </div>
-  </nav>
-</header>
+<div class="top"><div class="container"><span>Collège Le Pionnier — Kolwezi, RDC</span><span>+243 998 958 974</span></div></div>
+<header><div class="container nav">
+<a class="brand" href="#accueil"><img src="assets/logo.svg" alt="Logo Collège Le Pionnier"><div><b>Collège Le Pionnier</b><span>Excellence · Discipline · Réussite</span></div></a>
+<nav><a href="#accueil">Accueil</a><a href="#ecole">L'École</a><a href="#enseignement">Enseignement</a><a href="#options">Options</a><a class="admit" href="#admissions">Admissions</a></nav>
+</div></header>
 
-<main>
-<section id="accueil" class="hero">
-  <div class="container hero-content">
-    <p class="kicker">SITE OFFICIEL</p>
-    <h1>Donnez à votre enfant<br><span>les clés de la réussite.</span></h1>
-    <p class="hero-text">Un cadre d'apprentissage fondé sur le travail, la discipline et la préparation de chaque jeune à son avenir.</p>
-    <div class="actions">
-      <a class="button gold" href="#inscriptions">Découvrir les inscriptions</a>
-      <a class="button outline" href="#ecole">Découvrir l'école</a>
-    </div>
-  </div>
-</section>
+<section id="accueil" class="hero"><div class="container hero-content">
+<div class="eyebrow">Collège Le Pionnier · Kolwezi</div><h1>Former aujourd'hui les bâtisseurs de demain.</h1>
+<p>Un établissement tourné vers l'excellence académique, la discipline et la préparation des jeunes à leur avenir.</p>
+<div class="buttons"><a class="btn white" href="#ecole">Découvrir l'école</a><a class="btn outline" href="#admissions">Admissions</a></div>
+</div></section>
 
-<section class="trust-strip">
-  <div class="container trust-grid">
-    <div><strong>3</strong><span>Sections scolaires</span></div>
-    <div><strong>7</strong><span>Options au secondaire</span></div>
-    <div><strong>1</strong><span>Vision éducative</span></div>
-    <div><strong>2026</strong><span>Année scolaire</span></div>
-  </div>
-</section>
+<section id="ecole"><div class="container intro"><div class="photo"></div><div class="copy">
+<div class="eyebrow">L'École</div><h2>Une institution qui place l'élève au centre.</h2><div class="rule"></div>
+<p>Le Collège Le Pionnier accompagne les élèves dans leur parcours scolaire avec une approche fondée sur le travail, la discipline et la réussite.</p>
+<p>Implanté à Kolwezi, l'établissement propose un parcours structuré de la maternelle au secondaire.</p>
+</div></div></section>
 
-<section id="ecole" class="section">
-  <div class="container two-col">
-    <div class="photo-placeholder"><div><small>COLLÈGE LE PIONNIER</small><strong>Un avenir se prépare<br>aujourd'hui.</strong></div></div>
-    <div>
-      <p class="kicker dark">À PROPOS</p>
-      <h2>Former aujourd'hui les bâtisseurs de demain.</h2>
-      <p>Le Collège Le Pionnier accompagne les élèves de la maternelle au secondaire dans un environnement scolaire structuré et stimulant.</p>
-      <p>Notre approche met l'accent sur le travail, la discipline, les connaissances et le développement des compétences nécessaires à la réussite scolaire et à la préparation de l'avenir.</p>
-      <div class="values"><div><b>01</b><span>Travail</span></div><div><b>02</b><span>Discipline</span></div><div><b>03</b><span>Réussite</span></div></div>
-    </div>
-  </div>
-</section>
+<section class="light"><div class="container"><div class="head"><div class="eyebrow">Notre identité</div><h2>Mission, vision et valeurs</h2><p>Les principes qui donnent une direction claire à la communauté du Collège Le Pionnier.</p></div>
+<div class="cards"><article class="card"><div class="num">01</div><h3>Notre mission</h3><p>Offrir un cadre d'apprentissage sérieux qui développe les connaissances, les compétences et le sens des responsabilités.</p></article>
+<article class="card"><div class="num">02</div><h3>Notre vision</h3><p>Construire une institution reconnue pour la qualité de son enseignement et la préparation des jeunes à leur avenir.</p></article>
+<article class="card"><div class="num">03</div><h3>Nos valeurs</h3><p>Travail, discipline, respect, intégrité, responsabilité et recherche constante de l'excellence.</p></article></div></div></section>
 
-<section id="sections" class="section light">
-  <div class="container">
-    <div class="section-heading"><p class="kicker dark">PARCOURS SCOLAIRE</p><h2>Nos sections</h2><p>Un parcours structuré pour accompagner chaque étape de la scolarité.</p></div>
-    <div class="cards three">
-      <article class="card"><span class="number">01</span><h3>Maternelle</h3><p>Éveil, apprentissage et développement dans un environnement adapté aux premières années.</p></article>
-      <article class="card"><span class="number">02</span><h3>Primaire</h3><p>Acquisition des fondamentaux et développement progressif des compétences scolaires.</p></article>
-      <article class="card"><span class="number">03</span><h3>Secondaire</h3><p>Formation générale et technique avec plusieurs options pour construire son projet d'avenir.</p></article>
-    </div>
-  </div>
-</section>
+<section><div class="container"><div class="head"><div class="eyebrow">Mot de la direction</div><h2>Grandir par le savoir et par l'effort.</h2><p>Le parcours scolaire est une étape essentielle pour préparer chaque élève à construire son avenir avec confiance et responsabilité.</p></div></div></section>
 
-<section id="options" class="section">
-  <div class="container">
-    <div class="section-heading"><p class="kicker dark">ENSEIGNEMENT SECONDAIRE</p><h2>Nos options</h2><p>Des filières pour développer des compétences académiques et professionnelles.</p></div>
-    <div class="options-grid">
-      <div>Géomine</div><div>Électricité</div><div>Commercial &amp; Gestion</div><div>Pédagogie</div>
-      <div>Mécanique générale</div><div>Métallurgie</div><div>Scientifique</div>
-    </div>
-  </div>
-</section>
+<section id="enseignement" class="light"><div class="container"><div class="head"><div class="eyebrow">Enseignement</div><h2>Un parcours organisé en trois niveaux.</h2><p>Chaque niveau bénéficie d'une présentation adaptée à son étape de formation.</p></div>
+<div class="cards"><article class="card"><div class="num">NIVEAU 01</div><h3>Maternelle</h3><p>Un premier environnement scolaire destiné à éveiller la curiosité, l'autonomie et les bases de l'apprentissage.</p></article>
+<article class="card"><div class="num">NIVEAU 02</div><h3>Primaire</h3><p>Une formation fondamentale destinée à consolider les connaissances et les méthodes de travail.</p></article>
+<article class="card"><div class="num">NIVEAU 03</div><h3>Secondaire</h3><p>Un parcours qui prépare les élèves à la poursuite des études et à leur orientation.</p></article></div></div></section>
 
-<section id="pourquoi" class="section navy">
-  <div class="container">
-    <div class="section-heading inverse"><p class="kicker">NOTRE ENGAGEMENT</p><h2>Pourquoi choisir Le Pionnier ?</h2></div>
-    <div class="cards four">
-      <article><span class="feature-icon">01</span><h3>Encadrement</h3><p>Un accompagnement attentif des élèves.</p></article>
-      <article><span class="feature-icon">02</span><h3>Discipline</h3><p>Un cadre propice au travail et au respect.</p></article>
-      <article><span class="feature-icon">03</span><h3>Formation</h3><p>Des parcours adaptés aux ambitions des jeunes.</p></article>
-      <article><span class="feature-icon">04</span><h3>Avenir</h3><p>Une préparation orientée vers la réussite.</p></article>
-    </div>
-  </div>
-</section>
+<section id="options"><div class="container"><div class="head"><div class="eyebrow">Secondaire</div><h2>Les options de formation</h2><p>Les options sont présentées comme des parcours institutionnels.</p></div>
+<div class="options">
+<div class="option"><small>Option 01</small><strong>GEOMINE</strong></div><div class="option"><small>Option 02</small><strong>Électricité</strong></div>
+<div class="option"><small>Option 03</small><strong>Commercial et Gestion</strong></div><div class="option"><small>Option 04</small><strong>Pédagogie</strong></div>
+<div class="option"><small>Option 05</small><strong>Mécanique Générale</strong></div><div class="option"><small>Option 06</small><strong>Métallurgie</strong></div>
+<div class="option"><small>Option 07</small><strong>Scientifique</strong></div>
+</div></div></section>
 
-<section id="galerie" class="section light">
-  <div class="container">
-    <div class="section-heading"><p class="kicker dark">LA VIE DU COLLÈGE</p><h2>Galerie</h2><p>Ajoutez ici les vraies photos du bâtiment, des élèves, des salles et des activités.</p></div>
-    <div class="gallery"><div>PHOTO 01</div><div>PHOTO 02</div><div>PHOTO 03</div><div>PHOTO 04</div><div>PHOTO 05</div><div>PHOTO 06</div></div>
-  </div>
-</section>
+<section class="quote"><div class="container"><p>« L'éducation prépare chaque élève à construire son avenir. »</p><small>Collège Le Pionnier</small></div></section>
 
-<section id="actualites" class="section">
-  <div class="container">
-    <div class="section-heading"><p class="kicker dark">INFORMATIONS</p><h2>Actualités</h2></div>
-    <div class="cards three">
-      <article class="news-card"><small>INSCRIPTIONS</small><h3>Les inscriptions continuent</h3><p>Les places sont limitées. Contactez l'administration pour connaître les modalités d'inscription.</p></article>
-      <article class="news-card"><small>ANNÉE SCOLAIRE 2026</small><h3>Bienvenue au Collège Le Pionnier</h3><p>Retrouvez les informations importantes concernant la rentrée et la vie scolaire.</p></article>
-      <article class="news-card"><small>VIE DE L'ÉCOLE</small><h3>Activités et événements</h3><p>Cette rubrique pourra présenter les projets et moments forts de l'établissement.</p></article>
-    </div>
-  </div>
-</section>
+<section id="admissions" class="admissions"><div class="container adbox"><div><div class="eyebrow">Admissions</div><h2>Préparer l'avenir commence ici.</h2><p>Pour toute information concernant l'admission, contactez directement le Collège Le Pionnier.</p></div><a class="btn gold" href="tel:+243998958974">Nous contacter</a></div></section>
 
-<section id="inscriptions" class="section admission">
-  <div class="container admission-box">
-    <div><p class="kicker">ADMISSIONS</p><h2>Les inscriptions sont ouvertes.</h2><p>Vous souhaitez inscrire votre enfant ? Prenez contact avec l'établissement pour obtenir les informations nécessaires.</p></div>
-    <a class="button gold" href="#contact">Demander des informations</a>
-  </div>
-</section>
-
-<section id="contact" class="section light">
-  <div class="container contact-grid">
-    <div>
-      <p class="kicker dark">CONTACT</p><h2>Nous sommes à votre écoute.</h2>
-      <div class="contact-item"><b>Adresse</b><span>Quartier ISTM, Avenue CHEFFERIE DES BAYEKE</span></div>
-      <div class="contact-item"><b>Téléphone</b><span>+243 998 958 974</span></div>
-      <div class="contact-item"><b>E-mail</b><span>À compléter</span></div>
-      <div class="contact-item"><b>Horaires</b><span>À compléter</span></div>
-    </div>
-    <form id="contact-form">
-      <label>Nom complet<input name="nom" required placeholder="Votre nom"></label>
-      <label>Téléphone<input name="telephone" required placeholder="Votre numéro"></label>
-      <label>Objet<select name="objet"><option>Inscription</option><option>Informations générales</option><option>Autre</option></select></label>
-      <label>Message<textarea name="message" required placeholder="Votre message"></textarea></label>
-      <button class="button navy-button" type="submit">Préparer le message</button>
-      <p id="form-status" class="form-status"></p>
-    </form>
-  </div>
-</section>
-</main>
-
-<footer>
-  <div class="container footer-grid">
-    <div><div class="brand footer-brand"><span class="brand-mark">LP</span><span><strong>COLLÈGE LE PIONNIER</strong><small>Travail • Discipline • Réussite</small></span></div><p>Établissement scolaire — Maternelle, Primaire et Secondaire.</p></div>
-    <div><h4>Navigation</h4><a href="#ecole">L'école</a><a href="#sections">Sections</a><a href="#options">Options</a><a href="#inscriptions">Inscriptions</a></div>
-    <div><h4>Contact</h4><p>Quartier ISTM<br>Avenue Chefferie des Bayeke</p></div>
-  </div>
-  <div class="container copyright">© 2026 Collège Le Pionnier — Tous droits réservés. <span>Conçu et développé par Joseph Miji Mukona.</span></div>
-</footer>
-<script src="assets/js/main.js"></script>
-</body>
-</html>
+<footer><div class="container foot"><div><h3>Collège Le Pionnier</h3><p>Établissement scolaire à Kolwezi dédié à l'apprentissage, à la discipline et à la réussite.</p></div>
+<div><h3>Navigation</h3><ul><li><a href="#accueil">Accueil</a></li><li><a href="#ecole">L'École</a></li><li><a href="#enseignement">Enseignement</a></li><li><a href="#options">Options</a></li></ul></div>
+<div><h3>Contact</h3><ul><li>Quartier ISTM</li><li>Avenue Chefferie des Bayeke</li><li>Kolwezi, RDC</li><li>+243 998 958 974</li></ul></div></div>
+<div class="container bottom">© 2026 Collège Le Pionnier. Tous droits réservés.</div></footer>
+</body></html>
